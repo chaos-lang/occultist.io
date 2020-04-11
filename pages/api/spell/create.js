@@ -6,7 +6,8 @@ export default (req, res) => {
         const repo = req.body.repo
         const obj = {
             name: name,
-            repo: repo
+            repo: repo,
+            installs: 0
         }
         MongoClient.connect(process.env.MONGODB_URI, function(err, client) {
             if (err) {
