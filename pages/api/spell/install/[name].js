@@ -14,7 +14,7 @@ export default (req, res) => {
 
             client.db("ocultist").collection("spells").updateOne(query, { $inc: { installs: 1 } }, function(mongoErr, mongoRes) {
                 if (mongoErr) {
-                    res.status(409).json({ error: mongoErr });
+                    res.status(500).json({ error: mongoErr });
                 } else {
                     client.close();
                     res.status(200).json({});
