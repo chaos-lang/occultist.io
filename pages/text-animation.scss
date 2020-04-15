@@ -2,13 +2,13 @@
   animation: logo 9s linear infinite;
   position: absolute;
   top: 72.5%;
-  left: 50%;
+  left: 51%;
   transform: translate(-50%, -50%);
   height: 160px;
   overflow: hidden;
   animation: hideconsole 12s linear infinite;
 
-  font-family: 'Lucida Console', sans-serif;
+  font-family: 'monospace';
   font-size: 35px;
   line-height: 40px;
   color: #000;
@@ -47,7 +47,7 @@
 
     &__list {
       margin-top: 0;
-      padding-left: 262px;
+      padding-left: 380px;
       text-align: left;
       list-style: none;
 
