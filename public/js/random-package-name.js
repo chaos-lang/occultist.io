@@ -57,8 +57,8 @@ function updateSpellNames() {
         'url',
         'winreg'
     ];
-    var spell_names = document.getElementsByClassName("content__container__list__item");
-    var parent_div = document.getElementById("console-text-animation");
+    var spell_names = document.getElementsByClassName("console_text_animation__container__list__item");
+    var parent_div = document.getElementById("home__console_text_animation");
     if (window.getComputedStyle(parent_div).getPropertyValue("opacity") == 0) {
         var picked_spell_names = getRandom(spell_name_list, spell_names.length);
         for (var i = 0; i < spell_names.length; i++) {

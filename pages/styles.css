@@ -2,15 +2,11 @@ body {
     color: #000;
 }
 
-.chaos-svg {
-    display: block;
-}
-
-.logo-path  {
+.logo_path  {
     stroke: #000;
 }
 
-.logo-path {
+.logo_path {
     stroke-width: 0;
     animation: logo 12s linear infinite;
 }
