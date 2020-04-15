@@ -1,0 +1,42 @@
+body {
+    color: #000;
+}
+
+.chaos-svg {
+    display: block;
+}
+
+.logo-path  {
+    stroke: #000;
+}
+
+.logo-path {
+    stroke-width: 0;
+    animation: logo 12s linear infinite;
+}
+
+@keyframes logo {
+    0% {
+        stroke-width: 0.4px;
+        stroke-dashoffset: 1200;
+        fill-opacity: 0;
+    }
+    14% {
+        stroke-width: 0.4px;
+        fill-opacity: 0;
+    }
+    15% {
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
+        stroke-width: 0pt;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
+        stroke-width: 0pt;
+    }
+}
+
+.home__container {
+    text-align: center;
+}
