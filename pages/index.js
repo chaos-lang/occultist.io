@@ -1,14 +1,24 @@
 import Head from 'next/head'
 
-export default function Index() {
-    return (
+const React = require('react')
+const ReactMarkdown = require('react-markdown')
+
+export default class extends React.Component {
+    static async getInitialProps({ req }) {
+        const content = await require(`../md/home.md`)
+        return { content }
+    }
+
+    render () {
+        return (
         <div className="home__container">
             <Head>
                 <title>Occultist</title>
-                <meta name="description" content="Dependency manager for the Chaos language"></meta>
-                <meta name="keywords" content="chaos,dependency,manager,spell,package,module,extension"></meta>
-                <meta name="author" content="Chaos Language Development Authority"></meta>
+                <meta name="description" content="Dependency manager for the Chaos language" />
+                <meta name="keywords" content="chaos,dependency,manager,spell,package,module,extension" />
+                <meta name="author" content="Chaos Language Development Authority" />
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
             <svg className="logo_svg" xmlns="http://www.w3.org/2000/svg" id="Layer_1_1_" enableBackground="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512">
                 <path className="logo_path" strokeDasharray="1200 1000" xmlns="http://www.w3.org/2000/svg" d="m50.836 51.459h-3.672l-6.507 1.627-8.657 7.914-8.657-7.914-6.507-1.627h-3.672l-4.341 10.541h46.354z" fill="#707070"/>
@@ -47,8 +57,11 @@ export default function Index() {
 
             <br></br>
             <br></br>
-            <br></br>
-            <p>Welcome to Occultist.io</p>
+
+            <div id="home__markdown__container">
+                <ReactMarkdown source={this.props.content.default} />
+            </div>
         </div>
-    );
+        )
+    }
 }
