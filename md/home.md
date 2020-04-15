@@ -3,8 +3,7 @@
 Install **`occultist`** with:
 
 ```bash
-sudo curl -o /usr/local/bin/occultist \
-https://raw.githubusercontent.com/chaos-lang/occultist/master/occultist.sh && \
+sudo curl -o /usr/local/bin/occultist -L https://git.io/Jfv1u && \
 sudo chmod +x /usr/local/bin/occultist
 ```
 
