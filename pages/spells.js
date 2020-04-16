@@ -8,6 +8,8 @@ import Spell from "../components/spell";
 
 function Spells() {
     const { data } = useSWR("/api/spells", fetcher);
+    const d = new Date();
+    const currentYear = d.getFullYear();
 
     if (!data) return <div className="loading"><h3>Loading...</h3></div>;
 
@@ -31,6 +33,9 @@ function Spells() {
                 <h1>
                     The Chaos Spell Index
                 </h1>
+                <div className="library__container__seach_notice_wrapper">
+                    <em>Press</em> <kbd>G</kbd> <em>to search</em>
+                </div>
 
                 <div className="library__container__spell_list">
                     {data.map(result => (
@@ -39,6 +44,13 @@ function Spells() {
                 </div>
             </div>
 
+            <footer>
+                    <small>Copyright &copy; {currentYear} <strong>Chaos Language Development Authority</strong> -&nbsp;
+                        <a href="https://github.com/chaos-lang/occultist.io/blob/master/pages/spells.js">
+                            edit this page on GitHub
+                        </a>
+                    </small>
+            </footer>
         </div>
     );
 }
