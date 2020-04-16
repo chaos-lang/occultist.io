@@ -190,3 +190,15 @@ kbd {
     padding: 2px 4px;
     white-space: nowrap;
 }
+
+.goHome {
+	position: fixed;
+	left: -200px;
+	bottom: -150px;
+	opacity: 0.2;
+	cursor: pointer;
+}
+
+.goHome:hover {
+	opacity: 0.5;
+}

@@ -1,5 +1,6 @@
 const React = require('react')
 
+import Router from 'next/router'
 import Head from 'next/head'
 
 import useSWR from "swr";
@@ -30,6 +31,10 @@ function Spells() {
             </div>
 
             <div className="library__container">
+                <img className="goHome" src="/occultist.svg" onClick={() => {
+                    Router.push('/')
+                }} />
+
                 <h1>
                     The Chaos Spell Index
                 </h1>

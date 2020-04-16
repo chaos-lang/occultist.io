@@ -16,7 +16,7 @@ function Spell({ name, repo, installs }) {
     <div className="spell_wrapper">
       <p className="spell">
         {name.toUpperCase()} is {occultist_json.type === 'extension' ? ( <> an extension </> ) : ( <> a spell </> ) } written by <strong>{occultist_json.authors[0].name}</strong>
-        &nbsp;and hosted on <a href={repo}>{repo}</a>. Author describes the spell as: "{occultist_json.description}" Its lastest version is <strong>{occultist_json.version}</strong>
+        &nbsp;and hosted on <a href={repo}>{repo}</a>. Author describes the spell as: &ldquo;{occultist_json.description}&rdquo; Its lastest version is <strong>{occultist_json.version}</strong>
         &nbsp;The spell <strong>{name}</strong> is installed <strong>{installs}</strong> times and it's licensed under <strong>{occultist_json.license}</strong> - Tags:
         {occultist_json.tags.map((tag, index) => (
             <span>{index === 0 ? (<></>) : (<>, </>)} <strong>{tag}</strong></span>
