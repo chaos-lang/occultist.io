@@ -6,6 +6,7 @@ body {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     word-wrap: break-word;
+    background: #f3f3f3;
 }
 
 .logo_path  {
@@ -43,9 +44,21 @@ body {
     text-align: center;
 }
 
+.library__container {
+    margin-top: 120px;
+}
+
+.library__container > h1 {
+    text-align: center;
+}
+
 code {
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     cursor: text;
-    background: #F0F0F0;
+    background: #e2e2e2;
     padding: 0.15em 0.4em;
+}
+
+footer {
+    text-align: center;
 }

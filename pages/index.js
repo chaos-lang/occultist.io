@@ -64,11 +64,13 @@ export default class extends React.Component {
                 <ReactMarkdown source={this.props.content.default} />
             </div>
 
-            <div className="curl_wrapper">
-                <div className="curl">
-                    <h3>Browse the Library</h3>
+            <a href="/spells">
+                <div className="curl_wrapper">
+                    <div className="curl">
+                        <h3>Browse the Library</h3>
+                    </div>
                 </div>
-            </div>
+            </a>
 
             <a href="https://github.com/chaos-lang/occultist" className="github-corner" aria-label="View source on GitHub">
                 <svg width="120" height="120" viewBox="0 0 250 250" aria-hidden="true">
