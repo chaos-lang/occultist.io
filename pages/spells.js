@@ -1,10 +1,17 @@
-import Head from 'next/head'
-
 const React = require('react')
 
-export default class extends React.Component {
-    render () {
-        return (
+import Head from 'next/head'
+
+import useSWR from "swr";
+import fetcher from "../lib/fetcher";
+import Spell from "../components/spell";
+
+function Spells() {
+    const { data } = useSWR("/api/spells", fetcher);
+
+    if (!data) return <div className="loading"><h3>Loading...</h3></div>;
+
+    return (
         <div className="spells__container">
             <Head>
                 <title>Occultist</title>
@@ -24,19 +31,16 @@ export default class extends React.Component {
                 <h1>
                     The Chaos Spell Index
                 </h1>
+
+                <div className="library__container__spell_list">
+                    {data.map(result => (
+                        <Spell name={result.name} repo={result.repo} installs={result.installs} />
+                    ))}
+                </div>
             </div>
 
-            <br></br>
-            <br></br>
-            <br></br>
-            <footer>
-                    <small>Copyright &copy; {this.props.currentYear} <strong>Chaos Language Development Authority</strong> -&nbsp;
-                        <a href="https://github.com/chaos-lang/occultist.io/blob/master/pages/index.js">
-                            edit this page on GitHub
-                        </a>
-                    </small>
-            </footer>
         </div>
-        )
-    }
+    );
 }
+
+export default Spells;
