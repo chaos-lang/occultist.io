@@ -35,7 +35,7 @@ occultist install math master
 
 &nbsp;
 
-Install **the Chaos language**:
+Install [**the Chaos language**](https://chaos-lang.org/):
 
 ```bash
 sudo occultist install chaos
