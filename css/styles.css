@@ -42,3 +42,10 @@ body {
 .home__container {
     text-align: center;
 }
+
+code {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    cursor: text;
+    background: #F0F0F0;
+    padding: 0.15em 0.4em;
+}

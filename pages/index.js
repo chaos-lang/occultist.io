@@ -80,8 +80,9 @@ export default class extends React.Component {
 
             <br></br>
             <br></br>
+            <br></br>
             <footer>
-                    <small>Copyright &copy; {this.props.currentYear} Chaos Language Development Authority -&nbsp;
+                    <small>Copyright &copy; {this.props.currentYear} <strong>Chaos Language Development Authority</strong> -&nbsp;
                         <a href="https://github.com/chaos-lang/occultist.io/blob/master/pages/index.js">
                             edit this page on GitHub
                         </a>
