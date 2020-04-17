@@ -5,8 +5,8 @@
 }
 
 .curl {
-	width: 120px;
-	height: 120px;
+	width: calc(40px + 8vw);
+	height: calc(40px + 8vw);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -40,8 +40,8 @@
 }
 
 .curl:hover {
-	width: 240px;
-	height: 240px;
+	width: calc(2 * (40px + 8vw));
+	height: calc(2 * (40px + 8vw));
 }
 .curl:hover:before,
 .curl:hover:after {

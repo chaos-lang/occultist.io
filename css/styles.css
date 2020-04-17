@@ -9,6 +9,13 @@ body {
     background: #f3f3f3;
 }
 
+.logo_svg {
+	height: 50vh;
+	width: 50vh;
+	margin: auto;
+	display: block;
+}
+
 .logo_path  {
     stroke: #000;
 }
@@ -44,7 +51,9 @@ code {
     font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
     cursor: text;
     background: #e2e2e2;
-    padding: 0.15em 0.4em;
+	padding: 0.15em 0.4em;
+	display: inline-block;
+	text-align: left;
 }
 
 footer, .loading {
@@ -193,12 +202,17 @@ kbd {
 
 .goHome {
 	position: fixed;
-	left: -200px;
-	bottom: -150px;
+	left: -15vw;
+	bottom: -5vw;
 	opacity: 0.2;
 	cursor: pointer;
+	width: 30vw;
 }
 
 .goHome:hover {
 	opacity: 0.5;
+}
+
+a, a:visited {
+	color: #d5900d;
 }

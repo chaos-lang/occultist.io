@@ -1,12 +1,12 @@
 .github-corner:hover .octo-arm {
     animation:octocat-wave 560ms ease-in-out;
-    transform-origin: 130px 106px;
+    transform-origin: calc(80px + 9vw) calc(80px + 6.6vw);
 }
 
 @keyframes octocat-wave {
     0%,100%{transform:rotate(0)}
-    20%,60%{transform:rotate(-25deg)}
-    40%,80%{transform:rotate(10deg)}
+    20%,60%{transform:rotate(-5deg)}
+    40%,80%{transform:rotate(2deg)}
 }
 
 @media (max-width:500px) {
@@ -25,4 +25,6 @@
     top: 0;
     border: 0;
     right: 0;
+    width: calc(40px + 8vw);
+	height: calc(40px + 8vw);
 }

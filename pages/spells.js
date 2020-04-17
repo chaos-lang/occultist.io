@@ -12,7 +12,7 @@ function Spells() {
     const d = new Date();
     const currentYear = d.getFullYear();
 
-    if (!data) return <div className="loading"><h3>Loading...</h3></div>;
+    if (!data) return <div className="loading"><h4>Loading...</h4></div>;
 
     return (
         <div className="spells__container">
