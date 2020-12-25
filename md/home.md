@@ -19,7 +19,7 @@ occultist install math
 Install a **specific version** of the spell:
 
 ```bash
-occultist install math 1.0.1
+occultist install math 1.1.0
 ```
 
 Install a spell with **semantic versioning**:
